@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>当前组队信息</title>
+
+    <link rel="stylesheet" type="text/css" href="__STATIC__/hui/css/hui.css" />
+</head>
+
+
+<body>
+    <header class="hui-header">
+        <a id="hui-back" href="../../../ActList/actList"></a>
+        <h1>当前组队信息</h1>
+
+        <!-- <a id="hui-header-menu" href="../../add_team"></a> -->
+    </header>
+    <div class="hui-wrap">
+
+        <div class="hui-list" style="margin-top:22px;">
+            <ul>
+                <li style="background:darkcyan; ">
+                    <a href="../../add_team/aid/{$aid}">
+                        <div class="hui-list-text" style=" color:#fff; margin-left:35%;">点击添加队伍</div>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+        {volist name="res" id="vo"}
+        <div class="hui-list" style="margin-top:22px;">
+            <a href="../../detail/aid/{$aid}/tid/{$vo.tid}" style="height:auto; height:80px; padding-bottom:8px;">
+                <div class="hui-list-icons" style="width:110px; height:80px;">
+                    <div style="margin-top:20%; font-size:80%" class="hui-primary-txt">
+                        队伍{$i}
+                    </div>
+                    <!-- <img src="__STATIC__/hui/img/list/home.png" style="width:66px; margin:0px; border-radius:50%;" /> -->
+                </div>
+                <div class="hui-list-text" style="height:79px; line-height:79px;">
+                    {$vo.collage,$vo.name}
+                    <div class="hui-list-info">
+                        <span class="hui-icons hui-icons-right"></span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="javascript:;">
+
+
+                <div class="hui-list-text hui-danger-txt">
+                    目前缺：{$vo.need} 人
+                </div>
+                <div class="hui-list-text" style="color:#1BC5BB;">
+                    联系QQ：{$vo.QQ}
+                </div>
+            </a>
+        </div>
+        {/volist}
+
+        <!-- <div style="padding:30px;"> -->
+        <!-- <span class="hui-badge">1</span>
+            <span class="hui-badge hui-primary">205</span>
+            <span class="hui-badge hui-danger">3000</span>
+            <br /><br /> -->
+
+        <!-- <span class="hui-badge hui-primary" style="font-size:20px; padding:3px 8px;">205</span>
+        <span class="hui-badge hui-danger" style="font-size:20px; padding:3px 8px;">3000</span> -->
+        <!-- </div> -->
+
+
+
+    </div>
+    <script src="__STATIC__/hui/js/hui.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

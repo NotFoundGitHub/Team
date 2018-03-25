@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>组队啦</title>
+    <link rel="stylesheet" type="text/css" href="__STATIC__/hui/css/hui.css" />
+</head>
+
+<body style="background:#FCFCFC;">
+    <header class="hui-header">
+        <a href="/team/public/index/team/userList/id/{$aid}" id="hui-back"></a>
+        <h1>增加队伍</h1>
+    </header>
+    <div class="hui-wrap">
+
+        <form style="padding:28px 10px;" class="hui-form" id="form1" action="../../mid/aid/{$aid}" method="post">
+            <div class="hui-form-items">
+                <div class="hui-form-items-title">创建人:</div>
+                <input type="text" class="hui-input hui-input-clear" placeholder="如，赵国强" name="name" checkType="string" checkData="2,10" checkMsg="称呼应为2-10个字符" />
+            </div>
+            <div class="hui-form-items">
+                <div class="hui-form-items-title">手机号码:</div>
+                <input type="number" class="hui-input hui-input-clear" placeholder="如：1889088..." name="phone" checkType="phone" checkMsg="手机号码格式错误" />
+            </div>
+            <div class="hui-form-items">
+                <div class="hui-form-items-title">学号:</div>
+                <input type="number" class="hui-input hui-input-clear" placeholder="如：2015012..." name="sid" checkType="int" checkData="10" checkMsg="学号格式错误" required="required" />
+            </div>
+            <div class="hui-form-items">
+                <div class="hui-form-items-title">学院班级:</div>
+                <input type="text" class="hui-input" placeholder="如：信工电商151" name="collage" checkType="string" checkData="1,20" checkMsg="专业格式错误" />
+            </div>
+            <div class="hui-form-items">
+                <div class="hui-form-items-title">QQ号:</div>
+                <input type="number" class="hui-input hui-input-clear" placeholder="" name="QQ" checkType="int" checkData="5,15" checkMsg="QQ格式错误" />
+            </div>
+            <div class="hui-form-items">
+                <div class="hui-form-items-title">需求人数:</div>
+                <input type="number" class="hui-input hui-input-clear" placeholder="" name="need" checkType="int" checkData="1,3" checkMsg="人数数字格式错误" />
+            </div>
+
+
+            <div class="hui-form-items">
+                <div class="hui-form-items-title">需求详情</div>
+                <div class="hui-form-textarea">
+                    <textarea placeholder="详情..." name="note"></textarea>
+                </div>
+            </div>
+
+            <div style="padding:15px 8px;">
+                <button type="submit" class="hui-button hui-primary" id="submitBtn">提交</button>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="__STATIC__/hui/js/hui.js"></script>
+    <script type="text/javascript" src="__STATIC__/hui/js/hui-form.js"></script>
+    <script type="text/javascript">
+        hui.formInit();
+        //表单验证
+
+        hui('#submitBtn').click(function() {
+            var res = huiFormCheck('#form1');
+            //提交
+            if (res) {
+                hui.iconToast('验证通过！');
+                var data = hui.getFormData('#form1');
+                data.loves = loves;
+                console.log(JSON.stringify(data));
+            }
+        });
+    </script>
+
+
+</body>
+
+</html>
+
+
+
+</body>
+
+</html>

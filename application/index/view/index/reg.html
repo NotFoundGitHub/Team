@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>组队啦</title>
+    <link rel="stylesheet" type="text/css" href="__STATIC__/hui/css/hui.css" />
+</head>
+
+<body style="background:#FCFCFC;">
+    <header class="hui-header">
+        <!-- <div id="hui-back"></div> -->
+        <h1>注册</h1>
+    </header>
+    <div class="hui-wrap">
+
+        <form style="padding:28px 10px;" class="hui-form" id="form1" action="./regMid" method="post">
+            <div class="hui-form-items">
+                <div class="hui-form-items-title">您的称呼</div>
+                <input type="text" class="hui-input hui-input-clear" name="name" value="赵国强" checkType="string" checkData="2,10" checkMsg="称呼应为2-10个字符" required="required" />
+            </div>
+            <div class="hui-form-items">
+                <div class="hui-form-items-title">手机号码</div>
+                <input type="number" class="hui-input hui-input-clear" placeholder="如：1889088..." name="phone" checkType="phone" checkMsg="手机号码格式错误" required="required" />
+            </div>
+            <div class="hui-form-items">
+                <div class="hui-form-items-title">学号</div>
+                <input type="number" class="hui-input hui-input-clear" placeholder="如：2015012..." name="sid" checkType="int" checkData="10" checkMsg="学号格式错误" required="required" />
+            </div>
+            <div class="hui-form-items">
+                <div class="hui-form-items-title">学院-专业班级</div>
+                <input type="text" class="hui-input hui-input-clear" placeholder="如：信工电商151" name="collage" checkType="string" checkData="1,20" checkMsg="专业格式错误" required="required" />
+            </div>
+
+            <div class="hui-form-items">
+                <div class="hui-form-items-title">登录密码</div>
+                <input type="password" class="hui-input hui-pwd-eye" placeholder="登录密码" name="password" checkType="string" id="pwd" checkData="6,20" checkMsg="密码应为6-20个字符" required="required" />
+            </div>
+            <div class="hui-form-items">
+                <div class="hui-form-items-title">登录密码</div>
+                <input type="password" class="hui-input hui-pwd-eye" placeholder="确认密码" checkType="sameWithId" checkData="pwd" checkMsg="两次密码不一致" required="required" />
+            </div>
+
+            <div class="hui-form-items">技能：比如熟练PS，编程，也可以写特长，热心等(报名时可以提供给队长参考)</div>
+            <div class="hui-form-items">
+                <div class="line"></div>
+
+                <div class="hui-form-textarea">
+                    <div class="line"></div>
+                    <textarea placeholder="技能..特长..." name="skill"></textarea>
+                </div>
+            </div>
+
+
+            <div style="padding:15px 8px;">
+                <button type="submit" class="hui-button hui-primary" id="submitBtn">确认注册</button>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript" src="__STATIC__/hui/js/hui.js"></script>
+    <script type="text/javascript" src="__STATIC__/hui/js/hui-form.js"></script>
+    <script type="text/javascript">
+        hui.formInit();
+        //表单验证
+
+        hui('#submitBtn').click(function() {
+            var res = huiFormCheck('#form1');
+            //提交
+            if (res) {
+                hui.iconToast('验证通过！');
+                var data = hui.getFormData('#form1');
+                data.loves = loves;
+                console.log(JSON.stringify(data));
+            }
+        });
+    </script>
+</body>
+
+</html>

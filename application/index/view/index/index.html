@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>一起来组队吧</title>
+    <link rel="stylesheet" type="text/css" href="__STATIC__/hui/css/hui.css" />
+    <style>
+        .hui-start-banner {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            z-index: 9998;
+            left: 0px;
+            top: 0px;
+            background: #FFFFFF;
+            display: none;
+        }
+        
+        #hui-start-banner-close {
+            width: 50px;
+            height: 50px;
+            position: fixed;
+            z-index: 9999;
+            top: 50px;
+            right: 20px;
+            background: #F5F6F7;
+            display: none;
+            text-align: center;
+            border-radius: 50px;
+            line-height: 50px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .hui-start-banner .hui-swipe-indicator {
+            width: 96%;
+            position: absolute;
+            z-index: 3;
+            left: 2%;
+            bottom: 20px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="hui-header">
+        <!-- <div id="hui-back"></div> -->
+        <h1>一起来组队首页</h1>
+    </header>
+    <div class="hui-wrap">
+
+
+        <br>
+        <div class="hui-title">
+            修改信息等联系方式：
+            <!-- <span class="hui-title hui-primary-txt"><a href="tel:10086" style="color:darkcyan; margin-right:10px;">18821704916</a>[点击可直接拨打电话]</span> -->
+        </div>
+
+        <div class="hui-title">
+            QQ：
+            <a target="_blank" href="mqqwpa://im/chat?chat_type=wpa&uin=1254042169&version=1&src_type=web&web_src=oicqzone.com" style="text-decoration: underline;">1254042169</a>
+        </div>
+        <p>
+            点击QQ号即可跳转，希望大家先看一下网站目录，在队伍详情里面有加入队伍按钮，如果加入成功会跳转到加入队伍页面，希望别多次点。
+        </p>
+
+        <br>
+
+        <div class="hui-center-title" style="margin-top:5px;">
+            <h1>选择</h1>
+        </div>
+
+
+
+        <!-- <div class="hui-text hui-text-center" style="padding-top:20px;">启动动画演示效果</div> -->
+        <div style="text-align:center;">
+            <a href="/team/public/index/Actlist/actList/"> <button type="button" class="hui-button hui-primary" style="margin-top:50px;margin-left:35%; border-radius: 50%;width: 100px;height: 100px;">最新活动</button></a>
+            <a href="/team/public/index/index/meJoin"> <button type="button" class="hui-button hui-danger" style="margin-top:20px;margin-left:35%; border-radius: 50%;width: 100px;height: 100px;">我加入的团队</button></a>
+            <!-- <a href="./joinMe"> <button type="button" class="hui-button" style="background:rgb(16, 141, 72);color:#FFFFFF;margin-top:15px;margin-left:35%; border-radius: 50%;width: 100px;height: 100px;">我创建的团队</button></a> -->
+        </div>
+        <br>
+
+
+
+
+        
+        <br>
+        <br>
+
+
+
+    </div>
+    <div class="hui-start-banner hui-swipe" id="startBanner">
+        <div class="hui-swipe-items">
+            <div class="hui-swipe-item" style="background:#2C2342;"><img src="__STATIC__/hui/img/startbanner/1.jpg" /></div>
+            <div class="hui-swipe-item" style="background:#6CC5F1;color:#FFFFFF;"><img src="__STATIC__/hui/img/startbanner/2.jpg" /></div>
+            <!-- <div class="hui-swipe-item" style="background:rgb(6, 129, 103);">
+                <a href="javascript:huiStartBannerClose();"><img src="__STATIC__/hui/img/startbanner/3.png" /></a>
+            </div> -->
+        </div>
+    </div>
+    <div id="hui-start-banner-close" onclick="huiStartBannerClose();">关闭</div>
+    <script type="text/javascript" src="__STATIC__/hui/js/hui.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="__STATIC__/hui/js/hui-swipe.js" charset="UTF-8"></script>
+    <script type="text/javascript">
+        var wininfo = hui.winInfo();
+        hui('#startBanner').find('.hui-swipe-item').css({
+            height: wininfo.height + 'px'
+        });
+        hui('#startBanner').show();
+        hui('#hui-start-banner-close').show();
+        var swipe = new huiSwpie('#startBanner');
+        swipe.autoPlay = false;
+        swipe.loop = false;
+        swipe.run();
+
+        function huiStartBannerClose() {
+            hui('#startBanner').remove();
+            hui('#hui-start-banner-close').remove();
+        }
+    </script>
+</body>
+
+</html>

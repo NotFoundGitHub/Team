@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>活动列表</title>
+    <link rel="stylesheet" type="text/css" href="__STATIC__/hui/css/hui.css" />
+</head>
+
+<body>
+    <header class="hui-header">
+        <a id="hui-back" href="../index/">
+
+        </a>
+        <h1>活动列表</h1>
+    </header>
+    <div class="hui-wrap">
+        <div class="hui-center-title" style="margin-top:22px;">
+            <h1>正在进行</h1>
+        </div>
+        <div class="hui-media-list" style="padding:10px;" id="test">
+            <ul>
+                {volist name="res" id="vo"}
+                <li>
+                    <a href="/team/public/index/team/userList/id/{$vo.actId}">
+                        <div class="hui-media-list-img"><img src="__STATIC__/hui/img/2.png" style="margin-left:10px;width:50px;" />
+                            <!-- <p style="margin-left:15px;">活动{$vo.actId}</p> -->
+                            <p style="margin-left:15px;">活动{$i}</p>
+                        </div>
+                        <div class="hui-media-content">
+                            <h1>{$vo.actName}</h1>
+
+                            <p> 举办学院：{$vo.actCollage}</p>
+                            <p>截止时间：{$vo.endTime}</p>
+                        </div>
+                    </a>
+                </li>
+                {/volist}
+
+            </ul>
+        </div>
+
+    </div>
+    <script src="__STATIC__/hui/js/hui.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+    </script>
+    <script type="text/javascript">
+        //    onclick="window.location.href('/public/index/index/userList')"
+    </script>
+
+</body>
+
+</html>
