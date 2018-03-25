@@ -9,19 +9,19 @@ mysql+php5.x+Apache
 3.用户名和密码均为 root   "/application/database.php 中修改数据账号密码"
 4.配置完成打开浏览器输入 localhost/team/public/index/index/index 进入首页
 # 首页
-![img](https://github.com/NotFoundGitHub/team/1.png)
+![img](https://github.com/NotFoundGitHub/Team/blob/master/1.png)
 # 活动列表
-![img](https://github.com/NotFoundGitHub/team/2.png)
+![img](https://github.com/NotFoundGitHub/Team/blob/master/2.png)
 # 登录页面
-![img](https://github.com/NotFoundGitHub/team/3.png)
+![img](https://github.com/NotFoundGitHub/Team/blob/master/3.png)
 # 组队列表
-![img](https://github.com/NotFoundGitHub/team/4.png)
+![img](https://github.com/NotFoundGitHub/Team/blob/master/4.png)
 # 增加队伍信息
-![img](https://github.com/NotFoundGitHub/team/5.png)
+![img](https://github.com/NotFoundGitHub/Team/blob/master/5.png)
 # 队伍详情列表
-![img](https://github.com/NotFoundGitHub/team/6.png)
+![img](https://github.com/NotFoundGitHub/Team/blob/master/6.png)
 # 我加入的
-![img](https://github.com/NotFoundGitHub/team/7.png)
+![img](https://github.com/NotFoundGitHub/Team/blob/master/7.png)
 
 
 
